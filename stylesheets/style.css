@@ -13,6 +13,24 @@ body {
 	margin: 0;
 }
 
+p{
+	text-indent: 30px;
+	font-size: 20px;
+}
+
+#tagline{
+	font-family: 'Playball', cursive;
+	font-size: 26px;
+}
+
+#image_headline h2, h3, hr{
+	margin: 0;
+}
+
+#image_headline h1{
+	margin-bottom: 0;
+}
+
 
 header {
 	height: 90px;
