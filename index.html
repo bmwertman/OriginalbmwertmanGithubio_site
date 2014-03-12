@@ -3,51 +3,65 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Brad Wertman</title>
-		<link href="stylesheets/base.css" rel="stylesheet" />
-		<link href="stylesheets/layout.css" rel="stylesheet" />
-		<link href="stylesheets/skeleton.css" rel="stylesheet"/>
-		<link href="stylesheets/style.css" rel="stylesheet" />
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/layout.css" rel="stylesheet" />
+		<link href="css/skeleton.css" rel="stylesheet"/>
+		<link href="css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 		<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<header>
-			<div id="logo-box">
-				<div><h1>Wertman</h1></div>
-				<div><img id="logo" src="images/logo.svg"></div>
-				<div><h1>Web Development</h1></div>
-			</div>
-			<nav id="nav-links">
-				<ul>
-					<li><a href="">ABOUT ME</a></li>
-					<li><a href="">MY WORK</a></li>
-					<li><a href="">SKILLS</a></li>
-					<li><a href="">RESUME</a></li>
-					<li><a href="">CONTACT ME</a></li>
-				</ul>
-			</nav>
-		</header>
-		<div class="container">
-			<div class="three columns">
-				<h2>About Me</h2>
-				<hr>
-				<p class="six columns">Hello and welcome to my site! I know your time is important so I will keep my introduction brief. I started my career in the Detroit auto industry where I worked for top brands such as General Motors, Saturn and Toyota as an engineering technician and project manager performing product testing. There I learned important lessons about balancing getting things done with improving how things get done.<br>
-
-				Yearning for a new direction I traded my Mac toolbox for a Macbook and moved to New York. While the tools may be different the approach hasn't really changed. Clear communication and cutting through symptoms to get to root problems still pave the way to the answers. When I'm not pounding at the keys I like to cook, play strategy and word-related board games or just hang out with friends and family.</p>
-			</div>
-			<div id="image_headline" class="eight columns offset-by-five omega">
-				<h1>Brad Wertman</h1>
-				<hr>
-				<h2>Web Developer</h2>
+			<div id='header-box'>
+				<h1 id="headline">Brad Wertman ~ Web Developer</h1>
+				<!-- <div><img id="logo" src="images/logo.svg"></div> -->
 				<h3 id="tagline">Efficiency aficionado & craftsman of the countermeasure</h3>
-				<a href="mailto:brad.wertman@leanmeanz.com" target="_top">brad.wertman@leanmeanz.com</a>
 			</div>
-			<img class="eight columns offset-by-five omega" src="http://placesheen.com/800/500" >
-			<div class="three columns">
-				<h2>Skills</h2>
-				<hr>
-			</div>
-			<div class="sixteen columns">
-				<ul class="three columns clearfix">
+		</header>
+			<div class="container">
+				<div id="about" class="sixteen columns">
+					<div id="text-block" class="six columns offset-by-one">
+						<h2>About Me</h2>
+						<hr>
+						<p>Hello and welcome to my site! I know your time is important so I will keep my introduction brief. I started my career in the Detroit auto industry where I worked for top brands such as General Motors, Saturn and Toyota as an engineering technician and project manager performing product testing. There I learned important lessons about balancing getting things done with improving how things get done.<br>
+						<br>
+						Yearning for a new direction I traded my Mac toolbox for a MacBook and moved to New York. While the tools may be different the approach hasn't really changed. Clear communication and cutting through symptoms to get to root problems still pave the way to the answers. When I'm not pounding at the keys I like to cook, play strategy and word-related board games or just hang out with friends and family.</p>
+					</div>
+					<div id="slider" class="seven columns">
+						<figure id="slide-box">
+							<img  class="seven columns " src="images/diligent.png">
+							<img  class="seven columns " src="images/pensive.png">
+							<img  class="seven columns"src="images/profile_pic.png">
+							<img  class="seven columns " src="images/diligent.png">
+						</figure>
+					</div>
+				</div>
+		</div>
+
+				<!-- Nav Spinner -->
+				<!-- <div id="carousel" >
+					<figure id="spinner">
+						<figure>
+						  <div onclick=""class="circle ball" ><h3 class='ball-text'>My Work</h3></div>
+						</figure>
+						<figure>
+						 <div class="circle ball" ><h3 class='ball-text'>My Resume</h3></div>
+						</figure>
+						<figure>
+						 <div class="circle ball" ><h3 class='ball-text'>Contact Me</h3></div>
+						</figure>
+						<figure>
+						  <div class="circle ball" ><h3 class='ball-text'>My Skills</h3></div>
+						</figure>
+						<figure>
+						  <div class="circle ball" ><h3 class='ball-text'>About Me</h3></div>
+						</figure>
+					</figure>
+					<span id="left-toggle" onclick="galleryspin('-')"><i  class="fa fa-chevron-left fa-2x"></i></span>
+					<span id="right-toggle" onclick="galleryspin('')"><i class="fa fa-chevron-right fa-2x"></i></span>
+				</div>
+			<div class="sixteen columns"> -->
+				<!-- <ul class="three columns clearfix">
 					<h4>Programming Languages</h4>
 					<li>Ruby</li>
 					<li>Javascript</li>
@@ -72,24 +86,9 @@
 				<ul class="three columns clearfix">
 					<h4>Source Code Control</h4>
 					<li>Git</li>
-				</ul>
-			</div>
-			<div class="sixteen columns">
-				<h2 class="three columns">My Work</h2>
-				<hr class="three columns">
-			</div>
-			<div class="four columns">
-				<img class="four columns" src="http://placesheen.com/300/300">
-				<p class="four columns">Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
-			</div>
-			<div class="four columns offset-by-two">
-				<img class="four columns" src="http://placesheen.com/300/300">
-				<p class="four columns">Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
-			</div>
-			<div class="four columns offset-by-two">
-				<img class="four columns" src="http://placesheen.com/300/300">
-				<p class="four columns">Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,</p>
-			</div>
+				</ul> -->
+			<!-- </div>
+
 			<div class="sixteen columns">
 				<h2 class="three columns">Resume</h2>
 				<hr class="three columns">
@@ -115,14 +114,88 @@
 						</div>
 				</form>
 			</div>
-		</div>
+		</div> -->
 		<!-- <object type="image/svg+xml" data="images/web.svg" class="logo">
   		Kiwi Logo <!-- fallback image in CSS -->
-	<!-- 	</object> --> -->
+	<!-- 	</object> -->
+		<script src="javascript/jquery.js"></script>
+		<script src="javascript/app.js"></script>
 
-		<script src="javascripts/libraries/jquery.js"></script>
-		<script src="javascripts/libraries/underscore.js"></script>
-		<script src="javascripts/libraries/backbone.js"></script>
-		<script src="javascripts/app.js"></script>
+		<script type="text/javascript">
+		var spinner = document.querySelector("#spinner");
+		var angle = 0;
+		var numpics = $('figure#spinner figure').length;
+		degInt = 360 / numpics;
+		var start = 0;
+		var current = 1;
+
+		$(document).ready(function() {
+
+		  $('figure#spinner figure').each(function() {
+		     $(this).css('-webkit-transform','rotateY(-'+start+'deg)');
+		     $(this).css('transform', 'rotateY(-'+start+'deg)');
+		    start = start + degInt;
+		  });
+		 });
+
+		function setCurrent(current) {
+		  $('figure#spinner figure:nth-child('+current+')').addClass('current');
+		// alert(current);
+		}
+
+		function galleryspin(sign) {
+
+		$('figure#spinner figure').removeClass('current focus caption');
+
+		if (!sign) { angle = angle + degInt;
+		           current = (current+1);
+		            if (current > numpics) { current = 1; }
+		           } else {
+		            angle = angle - degInt;
+		            current = current - 1;
+		            if (current == 0) { current = numpics; }
+		           }
+
+		spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg)");
+		  setCurrent(current);
+		}
+
+		$("figure#spinner figure").click(function() {
+		  if ($(this).hasClass('current')) {
+		      $(this).toggleClass("focus");
+		  }
+		});
+
+		setCurrent(1);
+
+		// $('#carousel').css({"perspectiveOrigin", 'document.width() + 100 + 'px''});
+		// $('#spinner').css({'transformOrigin','50%' '50%' 'document.width() + 100 + 'px''});
+
+		$(document).keydown(function(e) {
+		    switch(e.which) {
+		        case 37: // left cursor
+		        galleryspin('-');
+		        break;
+
+		        case 39: // right cursor
+		        galleryspin('');
+		        break;
+
+		        case 90: // Z - zoom image in forefront image
+		        $('figure#spinner figure.current').toggleClass('focus');
+		        break;
+
+		        case 67: // C - show caption for forefront image
+		        $('figure#spinner figure.current').toggleClass('caption');
+		        break;
+
+		        default: return; // exit this handler for other keys
+		    }
+		    e.preventDefault();
+		});
+
+		</script>
+		<!--<script src="javascripts/libraries/underscore.js"></script>
+		<script src="javascripts/libraries/backbone.js"></script> -->
 	</body>
 </html>

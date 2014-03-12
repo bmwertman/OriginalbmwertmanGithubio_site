@@ -1,0 +1,249 @@
+/*p{
+font-family: Verdana, Geneva, sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+letter-spacing: normal;
+line-height: normal;
+text-transform: none;
+text-decoration: none;
+text-align: left;
+}*/
+body {
+	margin: 0;
+}
+
+header {
+	height: 90px;
+	background-color: #4ba6dd;
+	padding: 5px;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	opacity: 0.9;
+}
+
+#header-box{
+	width: 690px;
+	margin: 0 auto;
+}
+#headline{
+	margin: 0;
+}
+#tagline{
+	font-family: 'Playball', cursive;
+	font-size: 26px;
+	margin: 0 0 0 25px;
+}
+
+
+.container {
+	padding-top: 90px;
+}
+
+p{
+	margin-top: 15px;
+	text-indent: 30px;
+	font-size: 1.6em;
+}
+
+#text-block{
+	z-index: 2;
+	padding-right: 50px
+}
+
+/*main image slider*/
+
+#slide-box{
+	width: 2060px;
+	margin: 0;
+}
+
+#slider {
+	margin: 80px 0 0 0;
+	overflow: hidden;
+}
+
+div#slider figure {
+    position: relative;
+    -webkit-animation: 30s slidy infinite;
+    -moz-animation: 30s slidy infinite;
+    animation: 30s slidy infinite;
+}
+
+@-webkit-keyframes slidy { /*Safari & Chrome */
+	20% { left: 0%; }
+	25% { left: -100%; }
+	45% { left: -100%; }
+	50% { left: -200%; }
+	70% { left: -200%; }
+	80% { left: -300%; }
+	100% { left: -300%; }
+	0% { left: 0%; }
+}
+
+@keyframes slidy {
+	20% { left: 0%; }
+	25% { left: -100%; }
+	45% { left: -100%; }
+	50% { left: -200%; }
+	70% { left: -200%; }
+	80% { left: -300%; }
+	100% { left: -300%; }
+	0% { left: 0%; }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+	@-webkit-keyframes slidy { /*Safari & Chrome */
+	20% { left: 0%; }
+	25% { left: -110%; }
+	45% { left: -110%; }
+	50% { left: -210%; }
+	70% { left: -210%; }
+	80% { left: -320%; }
+	100% { left: -320%; }
+	0% { left: 0%; }
+	}
+
+	@keyframes slidy {
+	20% { left: 0%; }
+	25% { left: -100%; }
+	45% { left: -100%; }
+	50% { left: -200%; }
+	70% { left: -200%; }
+	80% { left: -300%; }
+	100% { left: -300%; }
+	0% { left: 0%; }
+	}
+}
+/* nav spinner */
+#carousel {
+  -webkit-perspective: 1200px;
+  padding-top: 5%;
+  font-size:0 ;
+  margin-bottom: 3rem;
+}
+figure#spinner {
+  -webkit-transform-style: preserve-3d;
+  height: 300px;
+  -webkit-transform-origin: center center -1200px;
+  -webkit-transition: 1s;
+}
+figure#spinner figure {
+  position: absolute; left: 38%;
+  -webkit-transform-origin: center center -1200px;
+  outline:1px solid transparent;
+  overflow: hidden;
+  -webkit-transition: 1s;
+}
+
+div#carousel span {
+
+  margin: 5%;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  -webkit-transition: 0.6s color;
+  position: relative;
+  margin-top: -6rem;
+  border-bottom: none;
+  line-height: 0;
+}
+
+#right-toggle{
+	float: right;
+}
+
+#left-toggle{
+	float: left;
+}
+
+.ball{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	border-radius: 50%;
+	position: relative;
+	background: -webkit-radial-gradient(50% 120%, circle cover, #323232, #0a0a0a 80%, #000000 100%)
+}
+
+.ball:before{
+	content: "";
+	top: 1%;
+	left: 5%;
+	bottom: 2.5%;
+	opacity: 0.6;
+	width: 90%;
+	height: 100%;
+	margin: 0;
+	border-radius: 50%;
+	position: absolute;
+	background: -webkit-radial-gradient(50% 120%, circle cover, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
+	-webkit-filter: blur(5px);
+	z-index: 2;
+}
+
+.circle{
+	border-radius: 50%;
+	height: 150px;
+	width: 150px;
+	margin: 0;
+	color: white;
+	background: -webkit-radial-gradient(50px 50px, circle, #5cabff, #000);
+	background: -moz-radial-gradient(50px 50px, circle, #5cabff, #000);
+	background: radial-gradient(50px 50px, circle, #5cabff, #000);
+}
+
+.ball .ball-text{
+  content: "My Work";
+  display: block;
+  position: absolute;
+  text-align: center;
+  height: 80px;
+  width: 100px;
+  left: 14%;
+  margin: 0;
+  top: 25%;
+  color: white;
+  font-family: Arial;
+  font-size: 30px;
+}
+
+/*#image_headline h1{
+	margin-bottom: 0;
+}*/
+
+/*#nav-links{
+	width: 635px;
+	margin: 0 auto;
+
+}
+
+#nav-links a{
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+	padding: 0 12px;
+	float: left;
+}
+#nav-links ul {
+	width: 635px;
+	margin: 0;
+}*/
+
+/*#logo{
+	height: 60px;
+	display: inline-block;
+}
+#logo-box{
+ height: 60px;
+ margin: 0 auto;
+ width: 670px;
+}
+#logo-box h1{
+	margin: 0;
+}
+#logo-box div{
+	float: left;
+}
+*/

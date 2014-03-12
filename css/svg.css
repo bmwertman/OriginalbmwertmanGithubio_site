@@ -1,0 +1,8 @@
+.logo{
+	text-indent: -9999px;
+	background-image:url('web.svg');
+	background-size: 792px 612px;
+	width: 792px;
+	height: 612px;
+	display: block;
+}
