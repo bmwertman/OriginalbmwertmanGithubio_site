@@ -23,17 +23,26 @@ header {
 	opacity: 0.9;
 }
 
-#header-box{
-	width: 690px;
+@media (max-width: 675px){
+	#headline {
+		font-size: 27px;
+		width: 400px;
+	}
+	#tagline {
+		font-size: 18px;
+		width: 388px;
+	}
+}
+
+.headline{
+	width: 675px;
 	margin: 0 auto;
 }
-#headline{
-	margin: 0;
-}
-#tagline{
+.tagline{
 	font-family: 'Playball', cursive;
-	font-size: 26px;
 	margin: 0 0 0 25px;
+	width: 591px;
+	margin: 0 auto;
 }
 
 
@@ -106,12 +115,12 @@ div#slider figure {
 
 	@keyframes slidy {
 	20% { left: 0%; }
-	25% { left: -100%; }
-	45% { left: -100%; }
-	50% { left: -200%; }
-	70% { left: -200%; }
-	80% { left: -300%; }
-	100% { left: -300%; }
+	25% { left: -110%; }
+	45% { left: -110%; }
+	50% { left: -210%; }
+	70% { left: -210%; }
+	80% { left: -320%; }
+	100% { left: -320%; }
 	0% { left: 0%; }
 	}
 }
