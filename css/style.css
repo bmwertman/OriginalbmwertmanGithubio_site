@@ -75,9 +75,9 @@ p{
 
 div#slider figure {
     position: relative;
-    -webkit-animation: 30s slidy infinite;
-    -moz-animation: 30s slidy infinite;
-    animation: 30s slidy infinite;
+    -webkit-animation: 40s slidy infinite;
+    -moz-animation: 40s slidy infinite;
+    animation: 40s slidy infinite;
 }
 
 @-webkit-keyframes slidy { /*Safari & Chrome */
@@ -122,6 +122,16 @@ div#slider figure {
 	80% { left: -320%; }
 	100% { left: -320%; }
 	0% { left: 0%; }
+	}
+
+	.container{
+		width: 100%;
+	}
+}
+@media (min-width: 1199px){
+	#slider{
+		width: 399px;
+		margin-left: 215px;
 	}
 }
 /* nav spinner */
