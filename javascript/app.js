@@ -19,9 +19,12 @@ $(document).ready(function() {
             height = height * ratio;    // Reset height to match scaled image
         }
         // Skeleton manipulation
-        if($(window).width() < 1999 && $(window).width() > 768){
-
-        if($(window).width() < 1999 && $(window).width() > 768){
+        if($(window).width() < 1999 && $(window).width() > 950){
+            $('#text-block').removeClass('six columns offset-by-one').addClass('eleven columns offset-by-two')
+            $('#slider').removeClass('seven columns').addClass('eleven columns offset-by-two')
+            $('#about').removeClass('sixteen columns')
+        }
+        if($(window).width() < 950 && $(window).width() > 768){
             $('#text-block').removeClass('six columns offset-by-one').addClass('eleven columns offset-by-two')
             $('#slider').removeClass('seven columns').addClass('eleven columns offset-by-two')
             $('#about').removeClass('sixteen columns')
