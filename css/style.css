@@ -129,9 +129,36 @@ div#slider figure {
 	}
 }
 @media (min-width: 1199px){
-	#slider{
+	#slide-box img{
 		width: 399px;
-		margin-left: 215px;
+	}
+	#slider {
+		width: 399px;
+	}
+	#text-block{
+		padding-right: 240px;
+	}
+}
+@media (min-width: 1090px) and (max-width: 1198px){
+	#slide-box img{
+		width: 399px;
+	}
+	#slider {
+		width: 399px;
+	}
+	#text-block{
+		padding-right: 120px;
+	}
+}
+@media (min-width: 882px) and(max-width: 1089px){
+	#slide-box img{
+		width: 399px;
+	}
+	#slider {
+		width: 399px;
+	}
+	#text-block{
+		padding-right: 0;
 	}
 }
 /* nav spinner */
