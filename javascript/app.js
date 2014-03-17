@@ -1,6 +1,93 @@
 $(document).ready(function() {
-    $(window).resize(function(){location.reload();});
-    $('#slide-box img').each(function() {
+   $(window).resize(function(){location.reload();});
+    $(function() {
+
+        // Skeleton manipulation
+        if($(window).width() <= 1199 && $(window).width() >= 1080){
+            $('#text-block').removeClass('six columns offset-by-three').addClass('ten columns offset-by-two');
+            $('#slider').removeClass('seven columns').addClass('ten columns');
+            $('#slide-box > img').removeClass('seven columns').addClass('ten columns');
+            $('.nav-bar').css('margin-left', '180px');
+
+            // $('#about').removeClass('sixteen columns');
+        }
+        else if($(window).width() <= 1079 && $(window).width() >= 944){
+            $('#slide-box > img').removeClass('seven columns');
+            $('#text-block').removeClass('ten columns offset-by-two').addClass('nine columns offset-by-two');
+            $('#slide-box > img').removeClass('ten columns').addClass('eight columns');
+            $('#slider').removeClass('nine columns offset-by-one').addClass('eight columns');
+            $('.nav-bar').css('margin-left', '118px');
+        }
+        else if($(window).width() <= 943 && $(window).width() >= 846){
+            $('#slide-box > img').addClass('seven columns');
+            $('#text-block').removeClass('nine columns offset-by-two').addClass('nine columns offset-by-one');
+            $('#slide-box > img').removeClass('eight columns').addClass('seven columns');
+            $('#slider').addClass('seven columns');
+            $('.nav-bar').css('margin-left', '9%');
+            $('a figure').removeClass('two columns').addClass('one column offset-by-one');
+        }
+        else if($(window).width() <= 845 && $(window).width() >= 760){
+            $('#text-block').removeClass('nine columns offset-by-one').addClass('nine columns');
+            $('#slider').removeClass('seven columns').addClass('six columns');
+            $('#slide-box > img').removeClass('seven columns').addClass('six columns');
+        }
+        else if($(window).width() < 759){
+            $('#about').addClass('sixteen columns');
+            $('#slide-box > img').removeClass('six columns').addClass('seven columns');
+        }
+        else {
+            $('#text-block').addClass('six columns offset-by-three');
+            // $('#slider').addClass('seven columns offset-by-two');
+            $('#slide-box > img').addClass('seven columns');
+            $('#about').addClass('sixteen columns');
+            $('.nav-bar').css('margin-left', '0px');
+
+        }
+        //Nav button animation
+        var travel = parseInt($('.nav-bar').offset().left);
+        var circumference = $('.ball').width() * Math.PI;
+        var rotation = (travel/circumference) * Math.PI * 57.2957795; // in degrees
+        var min_hide_margin = $('.nav-bar').width();
+        // $('.nav-bar').css('margin-left', min_hide_margin);
+        // // $({deg: 0}).animate({deg: rotation}, {
+        //     duration: 3000,
+        //     step: function(now){
+        //         $(".ball-text").css({
+        //              transform: "rotate(-" + now + "deg)"
+        //         });
+        //     }
+        // });
+
+        //form attachment Ajax
+        $(':button').click(function(){
+            var formData = new FormData($('form')[0]);
+            $.ajax({
+                url: 'upload.php',  //Server script to process data
+                type: 'POST',
+                xhr: function() {  // Custom XMLHttpRequest
+                    var myXhr = $.ajaxSettings.xhr();
+                    if(myXhr.upload){ // Check if upload property exists
+                        myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload
+                    }
+                    return myXhr;
+                },
+                //Ajax events
+                beforeSend: beforeSendHandler,
+                success: completeHandler,
+                error: errorHandler,
+                // Form data
+                data: formData,
+                //Options to tell jQuery not to process data or worry about content-type.
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+        });
+
+
+
+        //$('.nav-bar').removeClass('nav-btn-hide').addClass('nav-btn-roll');
+
         // if($(window).width() > 943){
         //     var maxHeight = 458;    // Max height for the image
         // }
@@ -18,42 +105,6 @@ $(document).ready(function() {
         //     width = width * ratio;    // Reset width to match scaled image
         //     height = height * ratio;    // Reset height to match scaled image
         // }
-        // Skeleton manipulation
-        if($(window).width() > 1199){
-            $('#text-block').addClass('six columns offset-by-one');
-            // $('#slider').addClass('seven columns offset-by-two');
-            $('#slide-box > img').addClass('seven columns');
-            $('#about').addClass('sixteen columns');
-        }
-        if($(window).width() <= 1199 && $(window).width() >= 1080){
-            $('#text-block').removeClass('six columns offset-by-one').addClass('ten columns offset-by-two');
-            $('#slider').removeClass('seven columns').addClass('ten columns');
-            $('#slide-box > img').removeClass('seven columns').addClass('ten columns');
-            // $('#about').removeClass('sixteen columns');
-        }
-        if($(window).width() <= 1079 && $(window).width() >= 944){
-            $('#slide-box > img').removeClass('seven columns');
-            $('#text-block').removeClass('ten columns offset-by-two').addClass('nine columns offset-by-two');
-            $('#slide-box > img').removeClass('ten columns').addClass('eight columns');
-            $('#slider').removeClass('nine columns offset-by-one').addClass('eight columns');
-        }
-        if($(window).width() <= 943 && $(window).width() >= 846){
-            $('#slide-box > img').addClass('seven columns');
-            $('#text-block').removeClass('nine columns offset-by-two').addClass('nine columns offset-by-one');
-            $('#slide-box > img').removeClass('eight columns').addClass('seven columns');
-            $('#slider').addClass('seven columns');
-        }
-        if($(window).width() <= 845 && $(window).width() >= 760){
-            $('#text-block').removeClass('nine columns offset-by-one').addClass('nine columns');
-            $('#slider').removeClass('seven columns').addClass('six columns');
-            $('#slide-box > img').removeClass('seven columns').addClass('six columns');
-        }
-        if($(window).width() < 759){
-            $('#about').addClass('sixteen columns');
-            $('#slide-box > img').removeClass('six columns').addClass('seven columns');
-        }
-
-
         // Check if the current width is larger than the max
         // if(width > maxWidth){
         //     ratio = maxWidth / width;   // get ratio for scaling image

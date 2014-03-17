@@ -30,7 +30,7 @@
 		border: 0;
 		font-size: 100%;
 		font: inherit;
-		vertical-align: baseline; 
+		vertical-align: baseline;
 }
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block; }
@@ -75,7 +75,7 @@
 	h6 { font-size: 14px; line-height: 21px; }
 	.subheader { color: #777; }
 
-	p { margin: 0 0 20px 0; }
+	/*p { margin: 0 0 20px 0; }*/
 	p img { margin: 0; }
 	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
 
@@ -95,8 +95,8 @@
 
 /* #Links
 ================================================== */
-	a, a:visited { color: #333; text-decoration: underline; outline: 0; }
-	a:hover, a:focus { color: #000; }
+	a, a:visited { text-decoration: underline; outline: 0; }
+	/*a:hover, a:focus { color: #000; }*/
 	p a, p a:visited { line-height: inherit; }
 
 
@@ -210,7 +210,7 @@
 /* #Forms
 ================================================== */
 
-	form {
+	/*form {
 		margin-bottom: 20px; }
 	fieldset {
 		margin-bottom: 20px; }
@@ -220,13 +220,11 @@
 	textarea,
 	select {
 		border: 1px solid #ccc;
-		padding: 6px 4px;
+		padding: 12px 4px;
 		outline: none;
 		-moz-border-radius: 2px;
 		-webkit-border-radius: 2px;
 		border-radius: 2px;
-		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		color: #777;
 		margin: 0;
 		width: 100%;
 		display: block;
@@ -258,7 +256,7 @@
 	legend span {
 		font-weight: normal;
 		font-size: 13px;
-		color: #444; }
+		color: #444; }*/
 
 /* #Misc
 ================================================== */
