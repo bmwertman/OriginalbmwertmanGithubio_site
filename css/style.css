@@ -1,6 +1,11 @@
+
+/*global styles*/
+/************************************************************************/
+
 body {
 	margin: 0;
 }
+
 p{
 	margin: 0;
 	padding: 5px;
@@ -35,6 +40,7 @@ header {
 	width: 675px;
 	margin: 0 auto;
 }
+
 .tagline{
 	font-family: 'Playball', cursive;
 	margin: 0 0 0 25px;
@@ -42,11 +48,9 @@ header {
 	margin: 0 auto;
 }
 
-
 .container {
 	padding-top: 90px;
 }
-
 
 #text-block{
 	z-index: 2;
@@ -56,12 +60,16 @@ header {
 .text-bckgrnd {
 	background-color: #eff3f6;
 	font-family: "Georgia", "Times New Roman", serif;
-	margin-top: 0px;
 	text-indent: 30px;
 	font-size: 1.4em;
+	border-radius: 1.2em;
 }
 
-/*main image slider*/
+
+/*about page */
+/*********************************************************************************/
+
+/*about page image slider*/
 #slide-box{
 	width: 2060px;
 	margin: 0;
@@ -157,6 +165,11 @@ div#slider figure {
 		padding-right: 0;
 	}
 }
+
+
+/*my work page*/
+/**********************************************************************************/
+
 .work-box{
 	max-height: 775px;
 }
@@ -168,40 +181,17 @@ div#slider figure {
 	margin-top: 20px;
 }
 #my-work img{
-	max-height: 313px;
+	max-height: 310px;
 }
 #my-work #slide-box{
 	width: 3625px;
 }
 
 
-@media (max-width: 900px) {
-	.nav-btn{
-	padding: 0 28px;
-	margin: 20px 0;
-	}
-}
-@media (max-width: 800px) {
-	.nav-btn{
-	padding: 0 18px;
-	margin: 20px 0;
-	}
-}
-@media (min-width: 768px){
-	body, html {
-	overflow-x: hidden;
-	overflow-y: auto;
-	}
-}
-
-@media (max-width: 767px) {
-	.nav-bar{
-		display: none;
-	}
-}
+/*resume page*/
+/****************************************************************************************/
 
 #resume {
-	/* padding-top: 84px; */
 	margin: 20px auto 0;
 	width: 765px;
 	display: block;
@@ -234,8 +224,10 @@ div#slider figure {
 	-moz-box-shadow:    4px 4px 5px 0px rgba(0, 0, 0, 0.75);
 	box-shadow:         4px 4px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
 .resume-button p{
 	display: inline-block;
+
 }
 .social-icon{
 	margin: 2px 0 0 10px;
@@ -258,12 +250,15 @@ div#slider figure {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
+
 h4#tab:hover #slideout_inner, h4#tab {
   left:170px;
 }
+
 #resume-share:hover #slideout_inner, h4#tab {
   left: 0;
 }
+
 h4#tab{
 	border-radius: 0.7em 0.7em 0 0;
 	position: absolute;
@@ -303,15 +298,46 @@ h4#tab{
 	}
 }
 
+
+/*site navigation*/
+/*************************************************************************************/
+@media (max-width: 900px) {
+	.nav-btn{
+	padding: 0 28px;
+	margin: 20px 0;
+	}
+}
+
+@media (max-width: 800px) {
+	.nav-btn{
+	padding: 0 18px;
+	margin: 20px 0;
+	}
+}
+
+@media (min-width: 768px){
+	body, html {
+	overflow-x: hidden;
+	overflow-y: auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.nav-bar{
+		display: none;
+	}
+}
+
 .nav-bar{
 	margin-top: 5px;
 }
+
 .nav-btn{
 	float: left;
 	margin: 0 0 0 50px;
 }
 
-
+/*nav button roll in animation*/
 /*.nav-btn-roll {
 	-webkit-transition: 3s;
 	 -moz-transition: 3s;
@@ -376,21 +402,22 @@ h4#tab{
 
 .ledge-face{
 	width: 100%;
-	height: 30px;
+	height: 60px;
 	margin: 5px 0 0 0;
-	-webkit-box-shadow: inset -10px 20px 40px -15px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow:    inset -10px 20px 40px -15px rgba(0, 0, 0, 0.75);
-	box-shadow:         inset -10px 20px 40px -15px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: inset -3px 20px 40px -15px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    inset -3px 20px 40px -15px rgba(0, 0, 0, 0.75);
+	box-shadow:         inset -3px 20px 40px -15px rgba(0, 0, 0, 0.75);
 }
 
-/*contact form*/
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+/*contact form*/
+/**************************************************************************************/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 #feedback-page{
 	text-align:center;
 }
-
 
 #form-div {
 	margin: 20px 0 10px 34px;
