@@ -15,56 +15,53 @@
 	<h3 class="tagline" id="tagline">Efficiency aficionado & craftsman of the countermeasure</h3>
 </header>
 <body>
-	<div class="container">
-		<div class="offset-by-four" id="form-main">
-
-			<form class="seven columns" id="form-div" action="http://getsimpleform.com/messages?form_api_token=e019e7ff313d71d8f33dc3ba00706187" method="post">
-	        <input name="content" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
-	      </p>
-	      <p class="email">
-	        <input name="content" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
-	      </p>
-	      <p class="text">
-	        <textarea name="message" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
-	      </p>
-	      <p>
-	      	<label><img src="images/paperclip.png">Attachment</label>
-	      	<br>
-	      	<input name="file" type="file" />
-	      </p>
-	      <div class="submit">
-	        <input type="submit" value="Send" id="button-blue"/>
-	        <div class="ease"></div>
-	      </div>
-	    </form>
-		</div>
-		<span class="nav-bar nav-btn-hide sixteen columns">
-			<a href="my_work.html">
-				<figure class="two columns offset-by-one nav-btn">
-				  <div class="circle ball" ><h3 class='ball-text'>My Work</h3></div>
-				</figure>
-			</a>
-			<a href="resume.html">
-				<figure class="two columns offset-by-one nav-btn">
-				 <div class="circle ball" ><h3 class='ball-text'>My Resume</h3></div>
-				</figure>
-			</a>
-			<a href="contact.html">
-				<figure class="two columns offset-by-one nav-btn">
-				 <div class="circle ball" ><h3 class='ball-text'>Contact Me</h3></div>
-				</figure>
-			</a>
-			<a href="skills.html">
-				<figure class="two columns offset-by-one nav-btn">
-				  <div class="circle ball" ><h3 class='ball-text'>My Skills</h3></div>
-				</figure>
-			</a>
-			<a href="index.html">
-				<figure class="two columns offset-by-one nav-btn">
-			  	<div class="circle ball" ><h3 class='ball-text'>About Me</h3></div>
-				</figure>
-			</a>
-		</span>
+	<div id="form-div">
+		<form id="form-main" action="http://getsimpleform.com/messages?form_api_token=e019e7ff313d71d8f33dc3ba00706187" method="post">
+        <input name="content" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+      </p>
+      <p class="email">
+        <input name="content" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+      </p>
+      <p class="text">
+        <textarea name="message" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+      </p>
+      <p>
+      	<label><img src="images/paperclip.png">Attachment</label>
+      	<br>
+      	<input name="file" type="file" />
+      </p>
+      <div class="submit">
+        <input type="submit" value="Send" id="button-blue"/>
+        <div class="ease"></div>
+      </div>
+    </form>
+	</div>
+	<div class="nav-bar nav-btn-hides group">
+		<a href="my_work.html">
+			<figure class="two columns offset-by-one nav-btn">
+			  <div class="circle ball" ><h3 class='ball-text'>My Work</h3></div>
+			</figure>
+		</a>
+		<a href="resume.html">
+			<figure class="two columns offset-by-one nav-btn">
+			 <div class="circle ball" ><h3 class='ball-text'>My Resume</h3></div>
+			</figure>
+		</a>
+		<a href="contact.html">
+			<figure class="two columns offset-by-one nav-btn">
+			 <div class="circle ball" ><h3 class='ball-text'>Contact Me</h3></div>
+			</figure>
+		</a>
+		<!-- <a href="skills.html">
+			<figure class="two columns offset-by-one nav-btn">
+			  <div class="circle ball" ><h3 class='ball-text'>My Skills</h3></div>
+			</figure>
+		</a> -->
+		<a href="index.html">
+			<figure class="two columns offset-by-one nav-btn">
+		  	<div class="circle ball" ><h3 class='ball-text'>About Me</h3></div>
+			</figure>
+		</a>
 	</div>
 	<div class="ledge-face"></div>
 	<script src="javascript/jquery.js"></script>

@@ -328,24 +328,36 @@ h4#tab{
 	}
 }
 
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .nav-bar{
-	margin-top: 5px;
+	margin: 0 auto;
+	width: 560px;
+	/*margin-left: 1420px;*/
+}
+
+.nav-bar figure{
+	margin: 0 20px;
 }
 
 .nav-btn{
 	float: left;
-	margin: 0 0 0 50px;
+	margin: 0;
 }
 
 /*nav button roll in animation*/
-/*.nav-btn-roll {
+.nav-btn-roll {
 	-webkit-transition: 3s;
 	 -moz-transition: 3s;
 	 -ms-transition: 3s;
 	 -o-transition: 3s;
 	 transition: 3s;
 	 margin-left: 0% !important;
-}*/
+}
 
 .ball{
 	width: 100%;
@@ -376,7 +388,7 @@ h4#tab{
 	border-radius: 50%;
 	height: 100px;
 	width: 100px;
-	margin: 0 0 0 10px;
+	margin: 0;
 	color: white;
 	background: -webkit-radial-gradient(35px 35px, circle, #5cabff, #000);
 	background: -moz-radial-gradient(35px 35px, circle, #5cabff, #000);
@@ -401,8 +413,10 @@ h4#tab{
 }
 
 .ledge-face{
+	position: absolute;
+	bottom: 0px;
 	width: 100%;
-	height: 60px;
+	height: 30px;
 	margin: 5px 0 0 0;
 	-webkit-box-shadow: inset -3px 20px 40px -15px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow:    inset -3px 20px 40px -15px rgba(0, 0, 0, 0.75);
@@ -419,8 +433,9 @@ h4#tab{
 	text-align:center;
 }
 
-#form-div {
-	margin: 20px 0 10px 34px;
+#form-main {
+	max-width: 800px;
+	margin: 115px auto 25px;
 	background-color: #4ba6dd;
 	padding-left:35px;
 	padding-right:35px;
@@ -512,11 +527,11 @@ textarea {
   resize:vertical;
 }
 
-#form-main label{
+#form-div label{
 	font-size: 18px;
 }
 
-#form-main img{
+#form-div img{
 	width: 15px;
 }
 input:hover, textarea:hover,
@@ -550,7 +565,7 @@ input:focus, textarea:focus {
 	color: #3498db;
 }
 
-#form-main .submit{
+#form-div .submit{
 	margin-top: 10px;
 }
 
@@ -571,7 +586,7 @@ input:focus, textarea:focus {
 }
 
 @media only screen and (max-width: 580px) {
-	#form-div{
+	#form-main{
 		left: 3%;
 		margin-right: 3%;
 		width: 88%;

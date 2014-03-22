@@ -7,7 +7,7 @@ $(document).ready(function() {
             $('#text-block').removeClass('six columns offset-by-three').addClass('ten columns offset-by-two');
             $('#slider').removeClass('seven columns').addClass('ten columns');
             $('#slide-box > img').removeClass('seven columns').addClass('ten columns');
-            $('.nav-bar').css('margin-left', '180px');
+            // $('.nav-bar').css('margin-left', '180px');
 
             // $('#about').removeClass('sixteen columns');
         }
@@ -16,14 +16,14 @@ $(document).ready(function() {
             $('#text-block').removeClass('ten columns offset-by-two').addClass('nine columns offset-by-two');
             $('#slide-box > img').removeClass('ten columns').addClass('eight columns');
             $('#slider').removeClass('nine columns offset-by-one').addClass('eight columns');
-            $('.nav-bar').css('margin-left', '118px');
+            // $('.nav-bar').css('margin-left', '118px');
         }
         else if($(window).width() <= 943 && $(window).width() >= 846){
             $('#slide-box > img').addClass('seven columns');
             $('#text-block').removeClass('nine columns offset-by-two').addClass('nine columns offset-by-one');
             $('#slide-box > img').removeClass('eight columns').addClass('seven columns');
             $('#slider').addClass('seven columns');
-            $('.nav-bar').css('margin-left', '9%');
+            // $('.nav-bar').css('margin-left', '9%');
             $('a figure').removeClass('two columns').addClass('one column offset-by-one');
         }
         else if($(window).width() <= 845 && $(window).width() >= 760){
@@ -40,23 +40,31 @@ $(document).ready(function() {
             // $('#slider').addClass('seven columns offset-by-two');
             $('#slide-box > img').addClass('seven columns');
             $('#about').addClass('sixteen columns');
-            $('.nav-bar').css('margin-left', '0px');
-
+            // $('.nav-bar').css('margin-left', '0px');
         }
+
         //Nav button animation
-        var travel = parseInt($('.nav-bar').offset().left);
+        var travel = (parseInt($('.nav-bar').offset().left) * 2) + $('.nav-bar').width();
+        var centered = ($(window).width() - $('.nav-bar').width()) / 2
         var circumference = $('.ball').width() * Math.PI;
-        var rotation = (travel/circumference) * Math.PI * 57.2957795; // in degrees
-        var min_hide_margin = $('.nav-bar').width();
-        // $('.nav-bar').css('margin-left', min_hide_margin);
-        // // $({deg: 0}).animate({deg: rotation}, {
-        //     duration: 3000,
-        //     step: function(now){
-        //         $(".ball-text").css({
-        //              transform: "rotate(-" + now + "deg)"
-        //         });
-        //     }
-        // });
+        var rotation = (Math.round(((travel/circumference) * Math.PI * 57.2957795)/360)) * 360; // in degrees
+         $('.nav-bar').css('margin-left', (travel).toString() + "px").queue(
+            function(){
+                $('.nav-bar').animate({ marginLeft: centered}, 3000);
+                $({deg: 0}).animate({deg: rotation}, {
+                    duration: 3000,
+                    step: function(now){
+                        $(".ball-text").css({
+                             transform: "rotate(-" + now + "deg)"
+                        });
+                    }
+                });
+                $( this ).dequeue();
+            });
+
+
+
+
 
         //form attachment Ajax
         $(':button').click(function(){
