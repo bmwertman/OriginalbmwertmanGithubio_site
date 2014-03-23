@@ -7,8 +7,6 @@ $(document).ready(function() {
             $('#text-block').removeClass('six columns offset-by-three').addClass('ten columns offset-by-two');
             $('#slider').removeClass('seven columns').addClass('ten columns');
             $('#slide-box > img').removeClass('seven columns').addClass('ten columns');
-            // $('.nav-bar').css('margin-left', '180px');
-
             // $('#about').removeClass('sixteen columns');
         }
         else if($(window).width() <= 1079 && $(window).width() >= 944){
@@ -62,10 +60,6 @@ $(document).ready(function() {
                 $( this ).dequeue();
             });
 
-
-
-
-
         //form attachment Ajax
         $(':button').click(function(){
             var formData = new FormData($('form')[0]);
@@ -91,11 +85,8 @@ $(document).ready(function() {
                 processData: false
             });
         });
-
-
-
-        //$('.nav-bar').removeClass('nav-btn-hide').addClass('nav-btn-roll');
-
+    });
+});
         // if($(window).width() > 943){
         //     var maxHeight = 458;    // Max height for the image
         // }
@@ -121,5 +112,4 @@ $(document).ready(function() {
         //     height = height * ratio;    // Reset height to match scaled image
         //     width = width * ratio;    // Reset width to match scaled image
         // }
-    });
-});
+
