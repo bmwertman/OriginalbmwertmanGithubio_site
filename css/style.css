@@ -335,10 +335,11 @@ h4#tab{
 }
 
 .nav-bar{
-	margin: 0 auto;
+	height:115px;
+	margin: 10px auto;
 	width: 560px;
-	/*margin-left: 1420px;*/
 }
+
 
 .nav-bar figure{
 	margin: 0 20px;
@@ -349,16 +350,6 @@ h4#tab{
 	margin: 0;
 }
 
-/*nav button roll in animation*/
-.nav-btn-roll {
-	-webkit-transition: 3s;
-	 -moz-transition: 3s;
-	 -ms-transition: 3s;
-	 -o-transition: 3s;
-	 transition: 3s;
-	 margin-left: 0% !important;
-}
-
 .ball{
 	width: 100%;
 	height: 100%;
@@ -366,6 +357,23 @@ h4#tab{
 	border-radius: 50%;
 	position: relative;
 	background: -webkit-radial-gradient(50% 120%, circle cover, #323232, #0a0a0a 80%, #000000 100%)
+}
+.shadow-sphere {
+  box-shadow: inset 50px -50px 100px hsla(0, 0%, 0%, .6);
+}
+
+.shadow-ellipse { position: relative;}
+
+.shadow-ellipse:after {
+  position: absolute;
+  content: "";
+  left: 27%;
+  right: 16%;
+  box-shadow: 11px 85px 20px 4px hsla(0, 0%, 0%, .275);
+  transform:rotate(-17deg);
+  -ms-transform:rotate(-17deg); /* IE 9 */
+  -webkit-transform:rotate(-17deg); /* Opera, Chrome, and Safari */
+  z-index: -10;
 }
 
 .ball:before{
@@ -413,14 +421,14 @@ h4#tab{
 }
 
 .ledge-face{
-	position: absolute;
-	bottom: 0px;
+	position: relative;
+	/* bottom: 0px; */
 	width: 100%;
-	height: 30px;
+	height: 60px;
 	margin: 5px 0 0 0;
 	-webkit-box-shadow: inset -3px 20px 40px -15px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow:    inset -3px 20px 40px -15px rgba(0, 0, 0, 0.75);
-	box-shadow:         inset -3px 20px 40px -15px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: inset -3px 20px 40px -15px rgba(0, 0, 0, 0.75);
+	box-shadow: inset -3px 20px 40px -15px rgba(0, 0, 0, 0.75);
 }
 
 
